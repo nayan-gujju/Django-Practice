@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <style>
+        table, th, td, tr {
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <h3>Exam Center Information</h3>
+    <th>ID</th>
+    <th>EXAM CENTER</th>
+    <th>CITY</th>
+    {% for exam in centers %}
+    <tr>
+    <td>{{exam.id}}</td>
+    <td>{{exam.name}}</td>
+    <td>{{exam.city}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    <hr>
+    <table>
+    <h3>My Exam Center Information</h3>
+    <th>ID</th>
+    <th>CENTER NAME</th>
+    <th>CITY</th>
+
+    {% for myexam in mycenters %}
+    <tr>
+    <td>{{myexam.id}}</td>
+    <td>{{myexam.name}}</td>
+    <td>{{myexam.city}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+   
+</body>
+</html>

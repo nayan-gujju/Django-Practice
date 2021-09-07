@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    {{names}}
+    <hr>
+    <ul>
+        {% for nm in names%}
+        <li> {{nm}} </li> 
+        {% endfor %}
+    </ul>
+    <hr>
+    <ul>
+        {% for nm in names reversed %}
+        <li> {{nm}} </li> 
+        {% endfor %}
+    </ul>
+    <hr>
+    <ul>
+        {% for nm in cv %}
+        <li> {{nm}} </li>
+        {% empty %}
+        <h2>Nothing</h2> 
+        {% endfor %}
+    </ul>
+    <hr>
+    {% for nm in names %}
+    {{forloop.counter}} {{nm}} <br>
+    {% empty %}
+    <h2>Nothing</h2> 
+    {% endfor %}
+    <hr>
+    {% for nm in names %}
+    {{forloop.counter0}} {{nm}} <br>
+    {% empty %}
+    <h2>Nothing</h2> 
+    {% endfor %}
+    <hr>
+    {% for nm in names %}
+    {{forloop.first}} {{nm}} <br>
+    {% empty %}
+    <h2>Nothing</h2> 
+    {% endfor %}
+    <hr>
+    {% for nm in names %}
+    {{forloop.last}} {{nm}} <br>
+    {% empty %}
+    <h2>Nothing</h2> 
+    {% endfor %}
+    <hr>
+    {% for nm in names %}
+    {{forloop.revcounter}} {{nm}} <br>
+    {% empty %}
+    <h2>Nothing</h2> 
+    {% endfor %}
+    <hr>
+    {% for nm in names %}
+    {{forloop.revcounter0}} {{nm}} <br>
+    {% empty %}
+    <h2>Nothing</h2> 
+    {% endfor %}
+    <hr>
+</body>
+</html>

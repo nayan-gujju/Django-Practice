@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <style>
+        table, th, td, tr {
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for student in students %}
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.password}}</td>
+                <td><a href="{% url 'update' student.id %}">{{student.id}}</a></td>
+                <td><a href="{% url 'delete' student.id %}">{{student.id}}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table><hr><h2>Latest Update Data</h2><hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fresher in freshers %}
+            <tr>
+                <td>{{fresher.id}}</td>
+                <td>{{fresher.name}}</td>
+                <td>{{fresher.email}}</td>
+                <td>{{fresher.password}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginations</title>
+</head>
+<body>
+    <h1>Show Page</h1>
+    {% if is_paginated %}
+        {% for i in page_obj %}
+        <h2> {{i.id}} </h2>
+        <h3> {{i.title}} </h3>
+        <p> {{i.description|truncatewords:10}} <a href="{% url 'next' i.id %}">Read More</a>  </p>
+        <small> {{i.writtername}} </small>
+        {% endfor %}
+        <hr>
+        <div>
+            <span>
+                {% if page_obj.has_previous %}
+                    <a href="?page={{page_obj.previous_page_number}}">Previous</a>
+                {% endif %}
+                
+                <span> Page {{page_obj.number}} of {{page_obj.paginator.num_pages}}</span>
+                
+                {% if page_obj.has_next %}
+
+                    {% comment %} <button type="button">
+                        Next<a href="{% url 'next' %}"></a>
+                    </button> {% endcomment %}
+                    {% comment %} <button href="{% url 'next' %}" type="submit" class="edit" formmethod="POST">Next</button> {% endcomment %}
+
+                    {% comment %} <form method="link" action="{% url 'next' %}">
+                    <input type="button" value="Start">
+                    </form> {% endcomment %}
+
+                    {% comment %} <button onClick="{% url 'next' %}"> Next</button> {% endcomment %}
+                    <a href="?page={{page_obj.next_page_number}}">Next</a>
+                {% endif %}
+                <hr>
+                <a href="{% url 'add' %}">Back To Add</a>
+            </span>
+        </div>
+    {% else %}
+        {% for post in object_list %}
+            <h2> {{post.id}} </h2>
+            <h3> {{post.title}} </h3>
+            <p> {{post.description}} </p>
+            <small> {{post.writtername}} </small>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

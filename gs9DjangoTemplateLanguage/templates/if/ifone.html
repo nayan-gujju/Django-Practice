@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF</title>
+</head>
+<body>
+    {% if nm %}
+    <h2>hello {{nm}}</h2>
+    {% endif %}
+    
+    {% if nm and st %}
+    <h2>{{st}} seats are available for {{nm}} course</h2>
+    {% endif %}
+    
+    {% if nm or st %}
+    <h2>{{st}} seats are available for {{nm}} course</h2>
+    {% endif %}
+    
+    {% if not st %}
+    <h2>{{st}} seats are not available</h2>
+    {% endif %}
+    
+    {% if nm == 'Django' %}
+    <h2>Hello {{nm}} </h2>
+    {% endif %}
+
+    {% if nm == 'tjango' %}
+    <h2>Hello {{nm}}</h2>
+    {% else %}
+    <h2>Course is not available</h2>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'course/css/style.css'%}">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h2>The course is {{cname}}</h2>
+    <form action="">
+        <input type="button" value="click" onclick="disp()">
+    </form>
+    <img src="{% static 'course/images/1.png' %}" alt="abc">
+    <script src="{% static 'course/js/all.js'%}"></script>
+</body>
+</html>

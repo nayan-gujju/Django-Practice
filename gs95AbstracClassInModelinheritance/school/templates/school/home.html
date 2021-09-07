@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <style>
+        table, th, td, tr {
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <h3>Student Information</h3>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>FEES</th>
+    {% for student in students %}
+    <tr>
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.fees}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    <hr>
+    <table>
+    <h3>Teacher Information</h3>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>DATE</th>
+    <th>SALARY</th>
+
+    {% for teacher in teachers %}
+    <tr>
+    <td>{{teacher.id}}</td>
+    <td>{{teacher.name}}</td>
+    <td>{{teacher.age}}</td>
+    <td>{{teacher.date}}</td>
+    <td>{{teacher.salary}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    <hr>
+    <table>
+    <h3>Contracter Information</h3>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>DATE</th>
+    <th>PAYMENTS</th>
+    {% for con in conns %}
+    <tr>
+    <td>{{con.id}}</td>
+    <td>{{con.name}}</td>
+    <td>{{con.age}}</td>
+    <td>{{con.date}}</td>
+    <td>{{con.payment}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

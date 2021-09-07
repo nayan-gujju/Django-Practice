@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        
+        <h2>Using p</h2>
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+        <div>
+            {{form.name.label}}
+        </div>
+        
+        <h2>Name-->label_tag</h2>
+        {{form.name.label_tag}}
+        <h2>Name-->id label</h2>
+        {{form.name.id_for_label}}
+        <h2>Name-->value</h2>
+        {{form.name.value}}
+        <h2>Name-->html_name</h2>
+        {{form.name.html_name}}
+        <h2>Name-->help_text</h2>
+        {{form.name.help_text}}
+        <h2>Name-->label</h2>
+        {{form.name.label}}
+    </form>
+</body>
+
+</html>

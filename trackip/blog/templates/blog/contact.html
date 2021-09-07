@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="col-sm-10">
+    <h3 class="my-5">Contact Page</h3>
+    <form action="" method="POST" novalidate>
+    {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Send">
+    
+    </form>
+    
+</div>
+{% endblock content %}

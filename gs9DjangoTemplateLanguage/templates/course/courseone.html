@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+    <style>
+        body{
+            background-color:bisque;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Course Name : {{nm}} </h2>
+    <h2>Total Duration : {{du}}</h2>
+    <h2>Course word length  : {{nm|length}}-->Filter--length </h2>
+    <h2>Course name slice  : {{nm|slice:'3'}}-->Filter--slice </h2>
+    <h2>Course name  truncate chars : {{nm|truncatechars:3}}-->Filter--truncatechars</h2>
+    <h2>Course name truncate word  : {{nm|truncatewords:2}}-->Filter--truncatewords </h2>
+    <h2>Course Name : {{nm|capfirst}}-->Filter--capfirst</h2>
+    <h2>Total Duration : {{du|capfirst}}-->Filter--capfirst This is not work caz first is number</h2>
+    <h2>Course Name : {{nm|upper}} -->Filter--upper </h2>
+    <h2>Total Duration : {{du|upper}} -->Filter--upper</h2>
+    <h2>Course Name : {{nm|lower}} -->Filter--lower </h2>
+    <h2>Total Duration : {{du|lower}} -->Filter--lower</h2>
+    <h2>Total fees :{{fe}}</h2>
+    <h2>Total fees :{{fe|floatformat}}-->value float format</h2>
+    <h2>Total fees :{{fe|floatformat:3}}-->value float format after point 3 digit</h2>
+    <h2>Total fees :{{fe|floatformat:"0"}}-->value float format to integer</h2>
+</body>
+</html>

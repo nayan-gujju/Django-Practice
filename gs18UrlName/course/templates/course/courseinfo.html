@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block core %} 
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'course/css/course.css' %}">
+{%endblock core %}
+
+{% block title %}Courseinfo{% endblock title %}
+
+{% block content %}
+<h2>This is a Course Page....</h2>
+{% endblock content %}

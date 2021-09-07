@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortwo</title>
+</head>
+<body>
+    <h2>{{student1}}</h2>
+    <hr>
+    {% for key, value in student1.items %}
+    {{key}} = {{value}} <br>
+    {% for k, v in value.items %}
+    {{k}} = {{v}} <br>
+    {% endfor %}
+    {% endfor %}
+    <hr>
+    {% for key, value in student1.items %}
+    {{key}} = {{value}} <br>
+    {% for k, v in value.items %}
+    {{forloop.parentloop.counter}}{{k}} = {{v}} <br>
+    {% endfor %}
+    {% endfor %}
+
+    
+
+</body>
+</html>

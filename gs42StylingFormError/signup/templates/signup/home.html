@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'signup/css/error.css' %}">
+    <title>User Registration</title>
+    <style>
+        .error{
+        list-style-type: none;
+        color: rgb(206, 87, 18);
+        margin: 0;
+        padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>

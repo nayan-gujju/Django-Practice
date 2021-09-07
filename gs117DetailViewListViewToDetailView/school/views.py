@@ -1,0 +1,19 @@
+from django.shortcuts import render
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
+from .models  import Student
+
+# Create your views here.
+
+class StudentDetailView(DetailView):
+    model = Student
+    template_name = 'school/student.html'
+    
+
+class StudentListView(ListView):
+    model = Student
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['freshers'] = Student.objects.all().order_by('name')
+        return context
