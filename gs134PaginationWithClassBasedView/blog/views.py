@@ -16,6 +16,9 @@ class PostListView(ListView):
             return super(PostListView, self).get_context_data(*args, **kwargs)
         except Http404:
             self.kwargs['page'] = 1
+            self.kwargs['page'] = 1
+            self.kwargs['page'] = 1
+            self.kwargs['page'] = 1
             return super(PostListView, self).get_context_data(*args, **kwargs) """
 
     def paginate_queryset(self, QuerySet, page_size):
